@@ -1,0 +1,11 @@
+# -*- coding: utf-8 -*-
+import urllib.request
+import pickle
+
+url = "http://www.baidu.com"
+data = urllib.request.urlopen(url).read()
+#data = data.decode()
+
+print(data)
+f = open('data.html','w',encoding='utf-8')
+f.write(str(data))
